@@ -74,14 +74,14 @@
 }
 
 .movie-header h2:hover {
-    color: #bfcedb; 
+    color: #005eb0; 
 }
 
 /* Movie container */
 .movie {
     width: 100%;
     padding: 40px 0;
-    background: #85afe4;
+    background: linear-gradient(184deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     display: flex;
     justify-content: center;
 }
@@ -156,18 +156,18 @@
     display: flex;
     justify-content: space-between; /* Items spread evenly */
     align-items: center; /* Align items vertically in center */
-    background: #1c3b64; /* Dark background */
+    background: linear-gradient(290deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 75%, rgba(0,212,255,1) 100%);
     color: white;
 }
 
-.option h3 {
+.option h2 {
     font-size: 24px; /* Slightly reduced size */
     cursor: pointer;
     padding: 5px 10px;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.option h3:hover {
+.option h2:hover {
     color: #fa2323;
     transform: scale(1.1);
 }

@@ -21,7 +21,7 @@ const Movie = () => {
 
   const fetchLatest = async () => {
     try {
-      const response = await fetch(`http://www.omdbapi.com/?s=${search}&apikey=f056c034`);
+      const response = await fetch(`https://www.omdbapi.com/?s=${search}&apikey=f056c034`);
       const fetchData = await response.json();
       setData(fetchData.Search || []);
     } catch (error) {
