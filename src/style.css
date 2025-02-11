@@ -1,0 +1,300 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.header
+{
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between; 
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 55%, rgba(0,212,255,1) 100%);
+}
+
+.header .logo h3 {
+    font-size: 60px;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: text-shadow 300ms ease-out;
+}
+
+.header .logo h3:hover {
+    text-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
+}
+
+.header .search {
+    display: flex; 
+}
+
+.header .search input {
+    padding: 10px 30px;
+    border-radius: 10px;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header .search button {
+    height: 40px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #073b66;
+    cursor: pointer;
+}
+
+.header .search button:hover {
+    color: #0e7ad3;
+    transform: scale(1.2);
+}
+
+/* Separate container for "Movies" title */
+.movie-header {
+    width: 100%;
+    padding: 30px 0;
+    background: #0d5691;
+    text-align: center;
+}
+
+.movie-header h2 {
+    font-size: 28px;
+    color: #ffffff; 
+    transition: color 0.3s ease-in-out;
+}
+
+.movie-header h2:hover {
+    color: #bfcedb; 
+}
+
+/* Movie container */
+.movie {
+    width: 100%;
+    padding: 40px 0;
+    background: #85afe4;
+    display: flex;
+    justify-content: center;
+}
+
+.movie .container {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Movie box with animation */
+.movie .container .box {
+    width: 300px;
+    height: 500px;
+    background: #1c3b64; /* Dark background for contrast */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    text-align: center;
+    position: relative;
+}
+
+.movie .container .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.movie .container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Movie details backdrop - covers 20% of the poster */
+.movie .container .box .detail {
+    width: 100%;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    animation: slowRise 1s ease-out;
+
+}
+
+/* Movie name hover effect */
+.movie .container .box .detail h3 {
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.movie .container .box .detail h3:hover {
+    color: #00178d;
+}
+
+.movie .container .box .detail h4 {
+    margin-top: 5px;
+    font-size: 16px;
+}
+.option {
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    padding: 10px 200px; /* Reduced padding */
+    display: flex;
+    justify-content: space-between; /* Items spread evenly */
+    align-items: center; /* Align items vertically in center */
+    background: #1c3b64; /* Dark background */
+    color: white;
+}
+
+.option h3 {
+    font-size: 24px; /* Slightly reduced size */
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.option h3:hover {
+    color: #fa2323;
+    transform: scale(1.1);
+}
+.like-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.like-btn:hover {
+    transform: scale(1.2);
+}
+
+@keyframes slowRise {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/* Media query for mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    /* Header adjustments */
+    .header {
+      padding: 10px 20px;
+      height: 120px;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    
+    .header .logo h3 {
+      font-size: 40px;
+    }
+    
+    .header .search {
+      margin-top: 0px;
+    }
+    
+    .header .search input {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .header .search button {
+      width: 20%;
+      padding: 10px;
+    }
+    
+    /* Movie header adjustments */
+    .movie-header {
+      padding: 20px 0;
+      height: 80px;
+    }
+    
+    .movie-header h2 {
+      font-size: 20px;
+      height: 80px;
+    }
+    
+    /* Movie container adjustments */
+    .movie {
+      padding: 20px 0;
+    }
+    
+    .movie .container {
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .movie .container .box {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+    }
+
+    .movie .container .box .detail h3 {
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .movie .container .box .detail h3:hover {
+        color: #01d773;
+    }
+    
+    .movie .container .box .detail h4 {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+    .movie .container .box .detail button {
+        size: 40px;
+    }
+    .movie .container .box .detail {
+        width: 100%;
+        height: 35%;
+        background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+        backdrop-filter: blur(2px);
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        text-align: center;
+        animation: slowRise 1s ease-out;
+
+
+    }
+    
+    /* Option adjustments */
+    .option {
+      height: 50px;
+      padding: 10px;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .option h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+ 
