@@ -64,7 +64,7 @@ const Movie = () => {
     <>
       <div className='header'>
         <div className='logo'>
-          <h3>JETFLIX</h3>
+          <h3>MOVEIFLIX</h3>
         </div>
         <div className='search'>
           <input

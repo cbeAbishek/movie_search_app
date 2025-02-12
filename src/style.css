@@ -9,10 +9,11 @@
 .header
 {
     width: 100%;
+    height: 100px;
     padding: 20px 60px;
     display: flex;
     justify-content: space-between; 
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 55%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(161, 0, 0) 100%);
 }
 
 .header .logo h3 {
@@ -21,6 +22,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     cursor: pointer;
     transition: text-shadow 300ms ease-out;
+    animation: font-loop 3s infinite;
 }
 
 .header .logo h3:hover {
@@ -81,7 +83,7 @@
 .movie {
     width: 100%;
     padding: 40px 0;
-    background: linear-gradient(184deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(161, 0, 0) 100%);
     display: flex;
     justify-content: center;
 }
@@ -139,6 +141,7 @@
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
+    
 }
 
 .movie .container .box .detail h3:hover {
@@ -156,7 +159,7 @@
     display: flex;
     justify-content: space-between; /* Items spread evenly */
     align-items: center; /* Align items vertically in center */
-    background: linear-gradient(290deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 75%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(161, 0, 0) 100%);
     color: white;
 }
 
@@ -165,12 +168,61 @@
     cursor: pointer;
     padding: 5px 10px;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    
 }
 
 .option h2:hover {
     color: #fa2323;
     transform: scale(1.1);
 }
+/* Define the font styles */
+.font-style-1 {
+  font-family: 'Arial', sans-serif;
+}
+
+.font-style-2 {
+  font-family: 'Times New Roman', serif;
+}
+
+.font-style-3 {
+  font-family: 'Courier New', monospace;
+}
+
+.font-style-4 {
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.font-style-5 {
+  font-family: 'Impact', sans-serif;
+}
+
+/* Define the hover animation */
+.hover-animation {
+  transition: font-family 1.5s ease-in-out;
+}
+
+/* Define the keyframe animation */
+@keyframes font-loop {
+  0% {
+    font-family: 'Arial', sans-serif;
+  }
+  20% {
+    font-family: 'Times New Roman', serif;
+  }
+  40% {
+    font-family: 'Courier New', monospace;
+  }
+  60% {
+    font-family: 'Comic Sans MS', cursive;
+  }
+  80% {
+    font-family: 'Impact', sans-serif;
+  }
+  100% {
+    font-family: 'Arial', sans-serif;
+  }
+}
+
 .like-btn {
     background: none;
     border: none;
